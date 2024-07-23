@@ -1,33 +1,33 @@
 body {
     background-image: url("/images/ContactBack.jpg");
 }
+/*
+    header {
+        font-size:80px; 
+        font-family: Arial, Helvetica, sans-serif; 
+        text-align: center;
+    }
 
-header {
-    font-size:80px; 
-    font-family: Arial, Helvetica, sans-serif; 
-    text-align: center;
-}
+    h2 {
+        font-family:sans-serif;
+        font-size: 40px;
+    }
 
-h2 {
-    font-family:sans-serif;
-    font-size: 40px;
-}
+    p {
+        font-size: 30px; 
+        font-family:sans-serif;
+    }
 
-p {
-    font-size: 30px; 
-    font-family:sans-serif;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
+    body {
+        font-family: Arial, sans-serif;
+    }
+*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -82,32 +82,6 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-    .navbar-menu {
-        position: absolute;
-        top: 60px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 60px);
-        background-color: #333;
-        flex-direction: column;
-        align-items: center;
-        transition: left 0.3s;
-        margin-left: 0;
-    }
-
-    .navbar-menu li {
-        margin: 20px 0;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
-
-    .navbar-menu.active {
-        left: 0;
-    }
-}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -156,33 +130,82 @@ a:hover {
 
 /* Additional styles for project sections */
 .project-section {
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.project-title {
-    font-size: 1.5em;
+.project-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.project-info h2 {
+    font-size: 2em;
     color: #333;
     margin-bottom: 10px;
 }
 
-.project-description {
+.project-info p {
     font-size: 1.1em;
-    color: #777;
-    margin-bottom: 15px;
-    padding: 10px;
-    border-left: 4px solid #ff6347;
-    background-color: #f0f0f0;
+    color: #666;
 }
 
-.project-link {
-    font-size: 1.1em;
-    color: #ff6347;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    transition: color 0.3s;
+.project-image {
+    flex: 1;
+    text-align: right;
 }
 
-.project-link:hover {
-    color: #e55335;
+.project-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-info {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .project-image {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        transition: left 0.3s;
+        margin-left: 0;
+    }
+
+    .navbar-menu li {
+        margin: 20px 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu.active {
+        left: 0;
+    }
 }
