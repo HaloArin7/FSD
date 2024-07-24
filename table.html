@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table id="t1">
+        <tr>
+            Add New Content:
+        </tr>
+        <tr>
+            <input type="tedocuxt" id="inputText">
+        </tr>
+        <tr>
+            <button id="b1">Append</button>
+        </tr>
+    </table>
+    <script>
+        document.getElementById("b1").addEventListener("click", addContent);
+        function addContent()
+        {
+            x = document.getElementById("inputText").value;
+            var y = document.getElementById("t1");
+            var z = document.createElement("tr");
+            z.textContent = x;
+            y.appendChild(z);
+        }
+    </script>
+</body>
+</html>
