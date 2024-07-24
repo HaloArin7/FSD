@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="a3Styles.css">
 </head>
 <body>
     <div class="container">
+
         <form id="studentTable">
             <label for="username">Username: </label>
             <input type="text" id="username" required>
 
             <label for="email">Email: </label>
-            <input type="text" id="email" required>
+            <input type="email" id="email" required>
             
             <label for="phoneNo">Phone Number: </label>
             <input type="text" id="phoneNo" required>
             
             <label for="password">Password: </label>
-            <input type="text" id="password" required>
+            <input type="password" id="password" required>
             
-            <label for="confirmPass">Confrim password: </label>
-            <input type="text" id="confirmPass" required>
+            <label for="confirmPass">Confirm password: </label>
+            <input type="password" id="confirmPass" required>
             
             <button type="submit">Register</button>
         </form>
         <div id="errorMessages"></div>
     </div>
-    <script src="s3.js"></script>
+    <script src="a3Script.js"></script>
 </body>
 </html>
