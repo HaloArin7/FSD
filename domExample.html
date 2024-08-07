@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <img id="image" src="/images/GitHub image.png" width="1080" height="720">
+    <script>
+        document.getElementById("demo").innerHTML = "Hello world!";
+        document.getElementById("image").src = "/images/8K.jpg";
+    </script>
+    <p>
+        The original image was 'GitHub image.png', but the script changed it to '8K.jpg'.
+    </p>
+</body>
+</html>

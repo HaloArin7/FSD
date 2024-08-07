@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #background {
+            width: 100%;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="background">Background Div</div>
+
+    <p style="background-color: #ff0000;">This is a paragraph.</p>
+    <button id="return">Return Background colour of p</button>
+    <button id="change">Change bg colour</button>
+    <button id="changeText">Change button text</button>
+    <button id="setbg">Set bg image</button>
+    <script>
+        $(document).ready(function(){
+            $("#return").click(function(){
+                alert("Background colour = " + $("p").css("background-color"));
+            });
+            $("#change").click(function(){
+                $("p").css("background-color", "yellow");
+            });
+            $('#changeText').click(function(){
+                $('#changeText').text('New text');
+            });
+            $('#setbg').click(function(){
+                $('#background').css('background-image', '/images/8K.jpg');
+            })
+        });
+    </script>
+</body>
+</html>

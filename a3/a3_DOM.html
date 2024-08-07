@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2 id="header">Hello World</h2>
+
+    <div id="content">
+        <p class="text">This is a paragraph</p>
+        <p class="text">This is another paragraph</p>
+    </div>
+    <p>This is just a random paragraph</p>
+    <img id="image" src="/images/GitHub image.png" width="360" height="360">
+    <br>
+
+    <button id="change_text">Change the text</button>
+    <button id="change_color">Change the colour</button>
+    <button id="imgButton">Change Image source</button>
+    <button id="addchild">Add text node</button>
+    <button id="removechild">Remove child</button>
+    <script>
+        let childCount = 0;
+        let lastChildId = null;
+        document.getElementById("imgButton").addEventListener('click', function(){
+            img = document.getElementById("image");
+            img.src = "/images/8K.jpg";
+            img.style.width = '540px';
+        });
+
+        document.getElementById("addchild").addEventListener('click', function(){
+            childCount++;
+
+            var parent = document.getElementById("content");
+            
+            var child = document.createElement('div');
+            child.id = 'child-' + childCount;
+
+            var text = document.createTextNode('This is the text node ' + childCount)
+            
+            child.appendChild(text);
+            
+            parent.appendChild(child);
+
+            lastChildId = child.id;
+
+        });
+
+        document.getElementById("removechild").addEventListener('click', function(){
+            if(lastChildId)
+            {
+                var lastChild = document.getElementById(lastChildId);
+                
+                lastChild.parentNode.removeChild(lastChild);
+                childCount -= 1;
+                
+                lastChildId = (childCount > 0) ? 'child-' + childCount : null;
+            }
+            else
+                alert('No child to delete.');
+        });
+        const originalParagraphTexts = [];
+        document.getElementById('change_text').addEventListener('click', function(){
+
+            const paragraphs = document.getElementsByTagName('p');
+
+            for (let i = 0; i < paragraphs.length; i++) {
+                originalParagraphTexts.push(paragraphs[i].innerHTML);
+                paragraphs[i].innerHTML = `Paragraph ${i + 1}`;
+            }
+        });
+        
+        document.getElementById('change_color').addEventListener('click', function(){
+            const textElements = document.getElementsByClassName('text');
+            for (let i = 0; i < textElements.length; i++) {
+                textElements[i].style.color = 'green';
+            }
+        });
+        
+        document.getElementById('header').innerHTML = 'This is DOM Manipulation';
+        </script>
+</body>
+</html>
