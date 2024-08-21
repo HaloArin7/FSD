@@ -6,28 +6,7 @@ header {
     font-family: Arial, Helvetica, sans-serif; 
     text-align: center;
 }
-    /*
 
-    h2 {
-        font-family:sans-serif;
-        font-size: 40px;
-    }
-
-    p {
-        font-size: 30px; 
-        font-family:sans-serif;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-    }
-*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -65,20 +44,6 @@ header {
 
 .navbar-menu a:hover {
     color: #ff6347; /* Tomato color on hover */
-}
-
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.navbar-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
 }
 
 /* Responsive styles */
@@ -193,17 +158,5 @@ a:hover {
         align-items: center;
         transition: left 0.3s;
         margin-left: 0;
-    }
-    
-    .navbar-menu li {
-        margin: 20px 0;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
-
-    .navbar-menu.active {
-        left: 0;
     }
 }
