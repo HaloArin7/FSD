@@ -37,7 +37,7 @@ document.getElementById("studentTable").addEventListener("submit", function(even
     } 
     else 
     {
-        window.location.href = 'submitted.html'
-        //errorMessages.innerHTML = 'Form submitted successfully!';
+        //window.location.href = 'submitted.html'
+        errorMessages.innerHTML = 'Form submitted successfully!';
     }
 });

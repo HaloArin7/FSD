@@ -71,14 +71,14 @@
                 paragraphs[i].innerHTML = `Paragraph ${i + 1}`;
             }
         });
-        
+    
         document.getElementById('change_color').addEventListener('click', function(){
             const textElements = document.getElementsByClassName('text');
             for (let i = 0; i < textElements.length; i++) {
                 textElements[i].style.color = 'green';
             }
         });
-        
+
         document.getElementById('header').innerHTML = 'This is DOM Manipulation';
         </script>
 </body>
