@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import InputField from './InputField';
 
 const FormValidation = () => {
     const [formData, setFormData] = useState({
@@ -64,46 +65,51 @@ const FormValidation = () => {
 		}
 
 	}
-	return(
-		<form onSubmit={handleSubmit}>
-			<div>
-				<label>Username: </label>
-				<input type='text' name='username' placeholder='Username' autoComplete='off' onChange={handleChange}></input>
-			</div>
-
-			{errors.username && <span>{errors.username}</span>}
-
-			<div>
-				<label>Email: </label>
-				<input type='email' name='email' placeholder='example@gmail.com' autoComplete='off' onChange={handleChange}></input>
-			</div>
-
-			{errors.email && <span>{errors.email}</span>}
-
-			<div>
-				<label>Phone Number: </label>
-				<input type='text' name='phoneNo' placeholder='Phone Number' autoComplete='off' onChange={handleChange}></input>
-			</div>
-
-			{errors.phoneNo && <span>{errors.phoneNo}</span>}
-
-			<div>
-				<label>Password: </label>
-				<input type='password' name='password' placeholder='********' onChange={handleChange}></input>
-			</div>
-
-			{errors.password && <span>{errors.password}</span>}
-
-			<div>
-				<label>Username: </label>
-				<input type='password' name='confirmPass' placeholder='********' onChange={handleChange}></input>
-			</div>
-
-			{errors.confirmPass && <span>{errors.confirmPass}</span>}
-
-			<button type='submit'>Submit</button>
-		</form>
-	)
+	return (
+        <form onSubmit={handleSubmit}>
+            <InputField
+                label="Username"
+                type="text"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                error={errors.username}
+            />
+            <InputField
+                label="Email"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                error={errors.email}
+            />
+            <InputField
+                label="Phone Number"
+                type="text"
+                name="phoneNo"
+                value={formData.phoneNo}
+                onChange={handleChange}
+                error={errors.phoneNo}
+            />
+            <InputField
+                label="Password"
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                error={errors.password}
+            />
+            <InputField
+                label="Confirm Password"
+                type="password"
+                name="confirmPass"
+                value={formData.confirmPass}
+                onChange={handleChange}
+                error={errors.confirmPass}
+            />
+            <button type="submit">Submit</button>
+        </form>
+    );
 }
 
 export default FormValidation;
