@@ -27,12 +27,12 @@ router.post('/', (req, res)=>{
     const userId= uuidv4();
     const userWithId= {...user, id:userId};
     users.push(userWithId);
-    res.send(`User with the name ${user.firstName} added to the database`)
+    res.send(`User with the name ${user.firstName} added to the database`);
 });
 
 router.get('/:id', (req, res)=>{
     const {id } = req.params;
-    const foundUser = users.find((user)=>user.id== id)
+    const foundUser = users.find((user)=>user.id == id)
     res.send(foundUser);
 });
 
