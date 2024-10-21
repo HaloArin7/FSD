@@ -69,7 +69,6 @@ router.patch("/:id", async (req, res) => {
     res.status(500).send("Error updating record");
 	}
 });
-
 // This section will help you delete a record
 router.delete("/:id", async (req, res) => {
 	try {
@@ -84,5 +83,4 @@ router.delete("/:id", async (req, res) => {
 		res.status(500).send("Error deleting record");
 	}
 });
-
 export default router;
